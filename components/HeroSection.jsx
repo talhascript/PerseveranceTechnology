@@ -5,9 +5,9 @@ export default function HeroSection() {
   return (
     <div className="bg-white">
       <div div className="relative isolate px-6 pt-14 lg:px-8">
-      <BackgroundPattern />
+      {/* <BackgroundPattern /> */}
 
-        {/* <BackgroundShapeTop/> */}
+        <BackgroundShapeTop/>
         <div className="mx-auto max-w-3xl py-32">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">

@@ -3,6 +3,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
 import { motion } from "framer-motion";
 
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -26,7 +27,8 @@ export default function Contact() {
       transition={{ duration: 0.40 }} // Set the animation duration to 1 second
       className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8"
     >
-      <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+      
+      <div className="isolate bg-white px-6 py-5 sm:py-5 lg:px-8">
         <div
           className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
           aria-hidden="true"
