@@ -2,3 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CONTACT PAGE */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to page transitions */
+/* Note: You can customize the animation duration and easing as needed */
+.page-enter {
+  animation: fadeIn 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+.page-enter-active {
+  animation: fadeIn 0.5s ease-in-out forwards;
+  opacity: 1;
+}
+  /* CONTACT PAGE */
+

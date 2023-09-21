@@ -4,3 +4,9 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+
+module.exports = {
+  // ...other configurations
+  cssModules: true,
+};
