@@ -3,14 +3,6 @@
 @tailwind utilities;
 
 /* TEAM PAGE */
-.team-container {
-  filter: blur(10px); /* Start with a blur effect */
-  transition: filter 0.3s ease-in-out; /* Apply a smooth transition effect */
-}
-
-.team-container:hover {
-  filter: blur(0); /* Remove the blur on hover, transitioning to normal */
-}
 
   /* TEAM PAGE */
 
