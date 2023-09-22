@@ -1,27 +1,30 @@
-import Link from 'next/link'
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from "next/link";
+import { useState } from "react";
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about-us' },
-  { name: 'Services', href: '/services' },
-  { name: 'Pricing', href: '/pricing' },
-]
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about-us" },
+  { name: "Services", href: "/services" },
+  { name: "Pricing", href: "/pricing" },
+];
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <nav
+          className="flex items-center justify-between p-6 lg:px-8"
+          aria-label="Global"
+        >
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Perseverance Technology</span>
               <img
-                className="h-12 w-auto"
+                className="h-12 w-auto hover:scale-150 transition-transform duration-300"
                 src="logo.png"
                 alt="perseverance technology logo"
               />
@@ -41,27 +44,39 @@ export default function Navbar() {
           {/* lg screen visible navigation items */}
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-lg p-3 font-semibold leading-6 text-gray-900 hover:text-indigo-600 hover:shadow-lg hover:rounded-lg transform hover:-translate-y-1 transition-transform duration-300"
+              >
                 {item.name}
               </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link
+              href="/contact"
+              className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:shadow-lg hover:scale-105 hover:text-indigo-600 hover:border-indigo-600 hover:border-opacity-50 transform transition-transform duration-300"
+            >
               Contact Us <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </nav>
 
         {/* Mobile menu, show/hide based on mobile menu state. */}
-        <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <Dialog
+          as="div"
+          className="lg:hidden"
+          open={mobileMenuOpen}
+          onClose={setMobileMenuOpen}
+        >
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Perseverance Technology</span>
                 <img
-                  className="h-12 w-auto"
+                  className="h-12 w-auto hover:scale-150 transition-transform duration-300"
                   src="logo.png"
                   alt="perseverance technology logo"
                 />
@@ -91,7 +106,7 @@ export default function Navbar() {
                 <div className="py-6">
                   <Link
                     href="/contact"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:shadow-lg hover:scale-105 hover:text-indigo-600 hover:border-indigo-600 hover:border-opacity-50 transition-transform duration-300"
                   >
                     Contact Us
                   </Link>
@@ -101,8 +116,6 @@ export default function Navbar() {
           </Dialog.Panel>
         </Dialog>
       </header>
-
-      
     </div>
-  )
+  );
 }

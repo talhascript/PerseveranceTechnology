@@ -2,27 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CONTACT PAGE */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* TEAM PAGE */
+.team-container {
+  filter: blur(10px); /* Start with a blur effect */
+  transition: filter 0.3s ease-in-out; /* Apply a smooth transition effect */
 }
 
-/* Apply the fade-in animation to page transitions */
-/* Note: You can customize the animation duration and easing as needed */
-.page-enter {
-  animation: fadeIn 0.5s ease-in-out forwards;
-  opacity: 0;
+.team-container:hover {
+  filter: blur(0); /* Remove the blur on hover, transitioning to normal */
 }
 
-.page-enter-active {
-  animation: fadeIn 0.5s ease-in-out forwards;
-  opacity: 1;
-}
-  /* CONTACT PAGE */
+  /* TEAM PAGE */
 
