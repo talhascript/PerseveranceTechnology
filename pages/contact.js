@@ -1,17 +1,9 @@
-
-import Contact from "@/components/Contact"
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
     <>
-    <div className="team-container">
-      <Contact/>
-      </div>
+      <Contact />
     </>
-  )
+  );
 }
-
-
-
-
-  
